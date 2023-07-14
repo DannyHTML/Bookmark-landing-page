@@ -1,9 +1,13 @@
 <script setup>
 import Header from "./Header.vue";
+import FirstSection from "./FirstSection.vue";
 </script>
 
 <template>
-  <Header />
+  <div class="pb-24">
+    <Header />
+  </div>
+  <FirstSection />
   <!-- <router-view v-slot="{ component }">
     <transition name="fade" mode="out-in">
       <component :is="component" />

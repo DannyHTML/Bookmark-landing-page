@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div
-      class="fixed z-50 h-20 flex justify-between w-full px-8 md:justify-between md:px-20 items-center"
+      class="fixed z-20 h-20 flex justify-between w-full px-8 md:justify-between md:px-20 items-center"
     >
       <div>
         <img
@@ -48,7 +48,7 @@
     <transition name="fade">
       <div
         v-if="isHidden"
-        class="flex absolute justify-center pt-24 w-screen h-screen bg-neutral2Colour bg-opacity-90"
+        class="flex absolute z-10 justify-center pt-24 w-screen h-screen bg-neutral2Colour bg-opacity-90"
         :class="{ hidden: !isHidden }"
       >
         <ul
@@ -123,5 +123,22 @@ defineComponent({
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+/*  slide */
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  transform: translateX(0);
 }
 </style>
