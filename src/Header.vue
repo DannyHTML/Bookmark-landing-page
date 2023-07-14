@@ -77,8 +77,17 @@
           </button>
           <div class="flex items-end mb-10 h-full">
             <div class="flex gap-6 items-center">
-              <img class="h-6" src="/images/icon-facebook.svg" alt="" />
-              <img class="h-5" src="/images/icon-twitter.svg" alt="" />
+              <a href="https://www.facebook.com/" target="_blank"
+                ><img class="h-6" src="/images/icon-facebook.svg" alt=""
+              /></a>
+              <a href="https://www.twitter.com/" target="_blank"
+                ><img class="h-5" src="/images/icon-twitter.svg" alt=""
+              /></a>
+              <a
+                href="https://github.com/DannyHTML/Bookmark-landing-page"
+                target="_blank"
+                ><font-awesome-icon icon="fa-brands fa-github" size="lg"
+              /></a>
             </div>
           </div>
         </ul>
@@ -89,8 +98,20 @@
 
 <script setup>
 import { ref } from "vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { defineComponent } from "vue";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(fab);
 
 const isHidden = ref(false);
+
+defineComponent({
+  components: {
+    FontAwesomeIcon,
+  },
+});
 </script>
 
 <style scoped>
