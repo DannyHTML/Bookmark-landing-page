@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div
-      class="fixed z-20 h-20 flex justify-between w-full px-8 md:justify-between md:px-20 items-center"
+      class="fixed z-20 h-20 flex justify-between w-full px-8 md:px-20 items-center"
     >
       <div>
         <img

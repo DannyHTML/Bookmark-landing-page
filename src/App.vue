@@ -4,7 +4,7 @@ import FirstSection from "./FirstSection.vue";
 </script>
 
 <template>
-  <div class="pb-24">
+  <div class="pb-24 md:pb-28">
     <Header />
   </div>
   <FirstSection />
