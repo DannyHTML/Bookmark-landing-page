@@ -45,7 +45,6 @@
       </div>
     </div>
     <!-- Mobile menu -->
-    <!-- test -->
     <transition name="fade">
       <div
         v-if="isHidden"
