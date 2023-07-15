@@ -1,54 +1,48 @@
 <template>
-  <div class="relative">
-    <div
-      class="fixed z-20 h-20 flex justify-between w-full px-8 md:px-20 items-center"
-    >
-      <div>
-        <img
-          :class="{ hidden: isHidden }"
-          src="/images/logo-bookmark.svg"
-          alt=""
-        />
-        <img
-          :class="{ hidden: !isHidden }"
-          src="/images/logo-bookmark-menu.svg"
-          alt=""
-        />
-      </div>
-      <div class="gap-10 hidden md:flex">
-        <ul class="flex gap-6 items-center uppercase">
-          <li><a href="#">features</a></li>
-          <li><a href="#">pricing</a></li>
-          <li><a href="#">contact</a></li>
-          <button
-            class="rounded-lg uppercase bg-secondaryColour flex justify-center items-center text-white w-24 h-10 py-2 hover:bg-white border-2 border-secondaryColour hover:text-secondaryColour"
-            type="button"
-          >
-            Login
-          </button>
-        </ul>
-      </div>
-      <div class="md:hidden">
-        <img
-          :class="{ hidden: isHidden }"
-          src="/images/icon-hamburger.svg"
-          alt=""
-          @click="isHidden = !isHidden"
-        />
-      </div>
-      <div :class="{ hidden: !isHidden }">
-        <img
-          src="/images/icon-close.svg"
-          alt=""
-          @click="isHidden = !isHidden"
-        />
-      </div>
+  <div
+    class="fixed z-20 h-20 flex justify-between w-full px-8 md:px-20 items-center"
+  >
+    <div>
+      <img
+        :class="{ hidden: isHidden }"
+        src="/images/logo-bookmark.svg"
+        alt=""
+      />
+      <img
+        class="relative z-20"
+        :class="{ hidden: !isHidden }"
+        src="/images/logo-bookmark-menu.svg"
+        alt=""
+      />
     </div>
-    <!-- Mobile menu -->
+    <div class="gap-10 hidden md:flex">
+      <ul class="flex gap-6 items-center uppercase">
+        <li><a href="#">features</a></li>
+        <li><a href="#">pricing</a></li>
+        <li><a href="#">contact</a></li>
+        <button
+          class="rounded-lg uppercase bg-secondaryColour flex justify-center items-center text-white w-24 h-10 py-2 hover:bg-white border-2 border-secondaryColour hover:text-secondaryColour"
+          type="button"
+        >
+          Login
+        </button>
+      </ul>
+    </div>
+    <div class="md:hidden">
+      <img
+        :class="{ hidden: isHidden }"
+        src="/images/icon-hamburger.svg"
+        alt=""
+        @click="isHidden = !isHidden"
+      />
+    </div>
+    <div :class="{ hidden: !isHidden }" class="relative z-20">
+      <img src="/images/icon-close.svg" alt="" @click="isHidden = !isHidden" />
+    </div>
     <transition name="fade">
       <div
         v-if="isHidden"
-        class="flex absolute z-10 justify-center pt-24 w-screen h-screen bg-neutral2Colour bg-opacity-90"
+        class="flex absolute z-10 top-0 left-0 justify-center pt-24 w-screen h-screen bg-neutral2Colour bg-opacity-90"
         :class="{ hidden: !isHidden }"
       >
         <ul
@@ -94,6 +88,7 @@
       </div>
     </transition>
   </div>
+  <!-- Mobile menu -->
 </template>
 
 <script setup>
