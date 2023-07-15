@@ -55,7 +55,7 @@
     <transition name="fade">
       <div
         v-if="isHidden"
-        class="flex absolute z-10 top-0 left-0 justify-center pt-24 w-screen h-screen bg-neutral2Colour bg-opacity-90"
+        class="flex absolute z-10 top-0 left-0 justify-center pt-24 w-screen h-screen bg-neutral2Colour bg-opacity-95"
         :class="{ hidden: !isHidden }"
       >
         <ul
