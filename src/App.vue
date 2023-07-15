@@ -12,30 +12,49 @@ import Features from "./Features.vue";
     <FirstSection />
   </div>
   <Features />
-  <!-- <router-view v-slot="{ component }">
-    <transition name="fade" mode="out-in">
-      <component :is="component" />
+  <div
+    class="flex flex-col md:flex-row md:max-w-3xl md:border-b-2 md:m-auto items-center justify-center gap-2 px-8 mt-10 mb-12 md:mt-10"
+  >
+    <router-link
+      to="/"
+      class="capitalize text-center text-lg md:border-t-0 md:border-0 border-t-2 w-full p-4 border-b-2"
+      >simple bookmarking</router-link
+    >
+    <router-link
+      to="/SpeedySearching"
+      class="capitalize text-center text-lg w-full p-4 md:border-0 border-b-2"
+      >speedy searching</router-link
+    >
+    <router-link
+      to="/EasySharing"
+      class="capitalize text-center text-lg w-full p-4 md:border-0 border-b-2"
+      >easy sharing</router-link
+    >
+  </div>
+  <router-view v-slot="{ Component }">
+    <transition name="slide" mode="out-in">
+      <component :is="Component" />
     </transition>
-  </router-view> -->
+  </router-view>
 </template>
 
 <style scoped>
-/* .fade-enter-active,
-.fade-leave-active {
+.slide-enter-active,
+.slide-leave-active {
   transition: all 0.7s;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.slide-enter-from,
+.slide-leave-to {
   opacity: 0;
   transform: translateX(-100px);
 }
 
-.fade-enter-to,
-.fade-leave-from {
+.slide-enter-to,
+.slide-leave-from {
   opacity: 1;
   transform: translateX(0px);
-} */
+}
 
 /* links styling */
 
@@ -47,6 +66,16 @@ import Features from "./Features.vue";
 
 .router-link-active {
   text-decoration: underline;
-  background-color: rgba(10, 40, 209, 0.2);
 } */
+
+.router-link-active::before {
+  content: "";
+  border-top: 2px solid red;
+  width: 0%;
+}
+
+.router-link-active::after {
+  width: 100%;
+  color: red;
+}
 </style>
