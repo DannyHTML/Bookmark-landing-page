@@ -2,12 +2,22 @@
   <div
     class="fixed z-20 h-20 flex justify-between w-full px-8 md:px-20 items-center"
   >
+    <transition name="fade">
+      <div
+        v-if="scrollActive"
+        ref="scrollContainer"
+        class="absolute -z-10 w-full h-full left-0 top-0 bg-white shadow-2xl"
+        :class="{ hidden: !scrollActive }"
+      ></div>
+    </transition>
     <div>
+      <!-- logo default -->
       <img
         :class="{ hidden: isHidden }"
         src="/images/logo-bookmark.svg"
         alt=""
       />
+      <!-- logo mobile menu -->
       <img
         class="relative z-20"
         :class="{ hidden: !isHidden }"
@@ -39,6 +49,9 @@
     <div :class="{ hidden: !isHidden }" class="relative z-20">
       <img src="/images/icon-close.svg" alt="" @click="isHidden = !isHidden" />
     </div>
+
+    <!-- Mobile menu -->
+
     <transition name="fade">
       <div
         v-if="isHidden"
@@ -92,9 +105,8 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { defineComponent } from "vue";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
@@ -102,10 +114,25 @@ library.add(fab);
 
 const isHidden = ref(false);
 
-defineComponent({
-  components: {
-    FontAwesomeIcon,
-  },
+// Header on scroll behavior
+
+const scrollContainer = ref(null);
+const scrollActive = ref(true);
+
+const handleScroll = () => {
+  if (!isHidden.value) {
+    const scrollPosition = window.scrollY;
+    scrollActive.value = scrollPosition >= 60;
+  }
+};
+
+onMounted(() => {
+  handleScroll(); // Call handleScroll once on mount to initialize scrollActive
+  window.addEventListener("scroll", handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
 });
 </script>
 
@@ -136,4 +163,8 @@ defineComponent({
 .slide-leave-from {
   transform: translateX(0);
 }
+
+/* test header scroll */
 </style>
+
+<!--  -->
