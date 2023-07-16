@@ -1,5 +1,5 @@
 <template>
-  <div class="sm:flex lg:gap-10">
+  <div class="sm:flex 2xl:gap-60">
     <div
       class="relative justify-center max-w-2xl md:w-full z-0 px-8 sm:pl-16 md:pl-20 mb-20"
     >
