@@ -58,27 +58,6 @@ import Features from "./Features.vue";
 
 /* links styling */
 
-/* .router-link-active {
-  text-decoration: none;
-  color: black;
-  transition: all 0.5s ease-in-out;
-}
-
-.router-link-active {
-  text-decoration: underline;
-} */
-
-/* .router-link::before {
-  content: "";
-  border-bottom: 2px solid red;
-  width: 0%;
-  transition: width 0.3s ease;
-}
-
-.router-link::after:hover {
-  width: 100%;
-} */
-
 .router-link-active,
 .router-link:active,
 .router-link:focus {
