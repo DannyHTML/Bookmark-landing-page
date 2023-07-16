@@ -134,22 +134,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
 });
-
-// Define a reactive reference for the viewport height
-const vh = ref(window.innerHeight * 0.01);
-
-// Function to update the viewport height reference
-const setViewportHeight = () => {
-  vh.value = window.innerHeight * 0.01;
-};
-
-// Call the function initially
-setViewportHeight();
-
-// Call the function whenever the window is resized
-onMounted(() => {
-  window.addEventListener("resize", setViewportHeight);
-});
 </script>
 
 <style scoped>
