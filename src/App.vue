@@ -13,7 +13,7 @@ import Features from "./Features.vue";
   </div>
   <Features />
   <div
-    class="flex flex-col md:flex-row md:max-w-3xl md:border-b-2 md:m-auto items-center justify-center gap-2 px-8 mt-10 mb-12 md:mt-10"
+    class="flex flex-col md:flex-row md:max-w-3xl md:border-b-2 md:m-auto items-center justify-center gap-2 px-8 mt-10 mb-12 md:mb-12 md:mt-10"
   >
     <router-link
       to="/"
