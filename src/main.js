@@ -9,7 +9,7 @@ import EasySharing from "./components/EasySharing.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", component: SimpleBookmarking },
+    { path: "/SimpleBookmarking", component: SimpleBookmarking },
     { path: "/SpeedySearching", component: SpeedySearching },
     { path: "/EasySharing", component: EasySharing },
   ],
