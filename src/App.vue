@@ -79,7 +79,9 @@ import Features from "./Features.vue";
   width: 100%;
 } */
 
-.router-link-active {
+.router-link-active,
+.router-link:active,
+.router-link:focus {
   color: hsl(231, 69%, 60%);
   transition: all 0.2s ease-in-out;
 }
@@ -99,7 +101,9 @@ import Features from "./Features.vue";
   transition: width 0.3s ease-in-out;
 }
 
-.router-link:hover::before {
+.router-link:hover::before,
+.router-link:focus::before,
+.router-link:active::before {
   width: 100%;
   left: 0;
 }
