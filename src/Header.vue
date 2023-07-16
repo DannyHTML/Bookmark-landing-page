@@ -11,17 +11,19 @@
     </transition>
     <div>
       <!-- logo default -->
-      <a href="/"><img
-        :class="{ hidden: isHidden }"
-        src="/images/logo-bookmark.svg"
-        alt=""
+      <a href="/"
+        ><img
+          :class="{ hidden: isHidden }"
+          src="/images/logo-bookmark.svg"
+          alt=""
       /></a>
       <!-- logo mobile menu -->
-      <a href="/"><img
-        class="relative z-20"
-        :class="{ hidden: !isHidden }"
-        src="/images/logo-bookmark-menu.svg"
-        alt=""
+      <a href="/"
+        ><img
+          class="relative z-20"
+          :class="{ hidden: !isHidden }"
+          src="/images/logo-bookmark-menu.svg"
+          alt=""
       /></a>
     </div>
     <div class="gap-10 hidden md:flex">
@@ -54,7 +56,7 @@
     <transition name="fade">
       <div
         v-if="isHidden"
-        class="flex absolute z-10 top-0 left-0 justify-center pt-24 w-screen h-screen bg-neutral2Colour bg-opacity-95"
+        class="flex absolute z-10 top-0 left-0 justify-center pt-24 w-screen h-screen bg-neutral2Colour bg-opacity-95 viewport-height"
         :class="{ hidden: !isHidden }"
       >
         <ul
@@ -125,12 +127,28 @@ const handleScroll = () => {
 };
 
 onMounted(() => {
-  handleScroll(); 
+  handleScroll();
   window.addEventListener("scroll", handleScroll);
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
+});
+
+// Define a reactive reference for the viewport height
+const vh = ref(window.innerHeight * 0.01);
+
+// Function to update the viewport height reference
+const setViewportHeight = () => {
+  vh.value = window.innerHeight * 0.01;
+};
+
+// Call the function initially
+setViewportHeight();
+
+// Call the function whenever the window is resized
+onMounted(() => {
+  window.addEventListener("resize", setViewportHeight);
 });
 </script>
 
@@ -182,5 +200,9 @@ onBeforeUnmount(() => {
 .links:hover::before {
   width: 100%;
   left: 0;
+}
+
+.viewport-height {
+  height: calc(var(--vh, 1vh) * 100);
 }
 </style>
