@@ -5,25 +5,24 @@
     <transition name="fade">
       <div
         v-if="scrollActive"
-        ref="scrollContainer"
         class="absolute -z-10 w-full h-full left-0 top-0 bg-white shadow-2xl"
         :class="{ hidden: !scrollActive }"
       ></div>
     </transition>
     <div>
       <!-- logo default -->
-      <img
+      <a href="/"><img
         :class="{ hidden: isHidden }"
         src="/images/logo-bookmark.svg"
         alt=""
-      />
+      /></a>
       <!-- logo mobile menu -->
-      <img
+      <a href="/"><img
         class="relative z-20"
         :class="{ hidden: !isHidden }"
         src="/images/logo-bookmark-menu.svg"
         alt=""
-      />
+      /></a>
     </div>
     <div class="gap-10 hidden md:flex">
       <ul class="flex gap-6 items-center uppercase">
@@ -116,7 +115,6 @@ const isHidden = ref(false);
 
 // Header on scroll behavior
 
-const scrollContainer = ref(null);
 const scrollActive = ref(true);
 
 const handleScroll = () => {
@@ -127,7 +125,7 @@ const handleScroll = () => {
 };
 
 onMounted(() => {
-  handleScroll(); // Call handleScroll once on mount to initialize scrollActive
+  handleScroll(); 
   window.addEventListener("scroll", handleScroll);
 });
 
@@ -176,7 +174,7 @@ onBeforeUnmount(() => {
   bottom: -4px;
   right: 0;
   width: 0;
-  height: 2px;
+  height: 2.5px;
   background-color: hsl(0, 94%, 66%);
   transition: width 0.3s ease-in-out;
 }
