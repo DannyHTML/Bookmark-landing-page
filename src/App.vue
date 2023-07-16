@@ -17,17 +17,17 @@ import Features from "./Features.vue";
   >
     <router-link
       to="/"
-      class="capitalize text-center text-lg md:border-t-0 md:border-0 border-t-2 w-full p-4 border-b-2"
+      class="router-link capitalize text-center text-lg md:border-t-0 md:border-0 border-t-2 w-full p-4 border-b-2"
       >simple bookmarking</router-link
     >
     <router-link
       to="/SpeedySearching"
-      class="capitalize text-center text-lg w-full p-4 md:border-0 border-b-2"
+      class="router-link capitalize text-center text-lg w-full p-4 md:border-0 border-b-2"
       >speedy searching</router-link
     >
     <router-link
       to="/EasySharing"
-      class="capitalize text-center text-lg w-full p-4 md:border-0 border-b-2"
+      class="router-link capitalize text-center text-lg w-full p-4 md:border-0 border-b-2"
       >easy sharing</router-link
     >
   </div>
@@ -36,7 +36,6 @@ import Features from "./Features.vue";
       <component :is="Component" />
     </transition>
   </router-view>
-
 </template>
 
 <style scoped>
@@ -69,14 +68,23 @@ import Features from "./Features.vue";
   text-decoration: underline;
 } */
 
-.router-link-active::before {
+/* .router-link::before {
   content: "";
-  border-top: 2px solid red;
+  border-bottom: 2px solid red;
   width: 0%;
+  transition: width 0.3s ease;
 }
 
-.router-link-active::after {
+.router-link::after:hover {
   width: 100%;
-  color: red;
+} */
+
+.router-link-active {
+  color: hsl(231, 69%, 60%);
+  transition: color 0.2s ease-in-out;
 }
+
+/* .router-link:hover {
+  color: red;
+} */
 </style>
