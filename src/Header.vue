@@ -56,7 +56,7 @@
     <transition name="fade">
       <div
         v-if="isHidden"
-        class="flex absolute z-10 top-0 left-0 justify-center pt-24 w-screen h-screen bg-neutral2Colour bg-opacity-95 viewport-height"
+        class="flex absolute z-10 top-0 left-0 justify-center pt-24 w-screen h-screen bg-neutral2Colour bg-opacity-95"
         :class="{ hidden: !isHidden }"
       >
         <ul
@@ -115,14 +115,13 @@ library.add(fab);
 
 const isHidden = ref(false);
 
-// Header on scroll behavior
+// Scroll effect header
 
 const scrollActive = ref(true);
 
 const handleScroll = () => {
   if (!isHidden.value) {
-    const scrollPosition = window.scrollY;
-    scrollActive.value = scrollPosition >= 60;
+    scrollActive.value = window.scrollY >= 60;
   }
 };
 
@@ -184,9 +183,5 @@ onBeforeUnmount(() => {
 .links:hover::before {
   width: 100%;
   left: 0;
-}
-
-.viewport-height {
-  height: calc(var(--vh, 1vh) * 100);
 }
 </style>
