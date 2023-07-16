@@ -18,7 +18,9 @@
         sites.
       </p>
       <div class="text-center mt-4 md:text-left">
-        <button class="py-2 px-4 bg-primaryColour text-white rounded-md">
+        <button
+          class="py-2 px-4 bg-primaryColour text-white rounded-md border-2 border-primaryColour hover:bg-white hover:border-2 hover:font-medium hover:border-primaryColour hover:text-primaryColour hover:text-lg duration-300"
+        >
           More info
         </button>
       </div>

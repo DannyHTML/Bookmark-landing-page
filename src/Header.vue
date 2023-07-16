@@ -27,9 +27,9 @@
     </div>
     <div class="gap-10 hidden md:flex">
       <ul class="flex gap-6 items-center uppercase">
-        <li><a href="#">features</a></li>
-        <li><a href="#">pricing</a></li>
-        <li><a href="#">contact</a></li>
+        <li class="links"><a href="#">features</a></li>
+        <li class="links"><a href="#">pricing</a></li>
+        <li class="links"><a href="#">contact</a></li>
         <button
           class="rounded-lg uppercase bg-secondaryColour duration-200 flex justify-center items-center text-white w-24 h-10 py-2 hover:bg-white border-2 border-secondaryColour hover:text-secondaryColour"
           type="button"
@@ -164,7 +164,25 @@ onBeforeUnmount(() => {
   transform: translateX(0);
 }
 
-/* test header scroll */
-</style>
+/* Links  */
 
-<!--  -->
+.links {
+  position: relative;
+}
+
+.links::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: hsl(0, 94%, 66%);
+  transition: width 0.3s ease-in-out;
+}
+
+.links:hover::before {
+  width: 100%;
+  left: 0;
+}
+</style>
