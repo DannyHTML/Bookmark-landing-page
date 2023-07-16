@@ -56,7 +56,7 @@
     <transition name="fade">
       <div
         v-if="isHidden"
-        class="flex absolute z-10 top-0 left-0 justify-center pt-24 w-screen h-screen bg-neutral2Colour bg-opacity-95"
+        class="flex fixed z-10 inset-0 justify-center pt-24 w-screen bg-neutral2Colour bg-opacity-95"
         :class="{ hidden: !isHidden }"
       >
         <ul
@@ -83,19 +83,20 @@
           >
             Login
           </button>
-          <div class="flex items-end mb-10 h-full">
-            <div class="flex gap-6 items-center">
-              <a href="https://www.facebook.com/" target="_blank"
-                ><img class="h-6" src="/images/icon-facebook.svg" alt=""
-              /></a>
-              <a href="https://www.twitter.com/" target="_blank"
-                ><img class="h-5" src="/images/icon-twitter.svg" alt=""
-              /></a>
+          <div class="flex mb-10 h-full">
+            <div class="flex gap-6 items-end">
+              <a href="https://www.facebook.com/" target="_blank">
+                <img class="h-6" src="/images/icon-facebook.svg" alt="" />
+              </a>
+              <a href="https://www.twitter.com/" target="_blank">
+                <img class="h-5" src="/images/icon-twitter.svg" alt="" />
+              </a>
               <a
                 href="https://github.com/DannyHTML/Bookmark-landing-page"
                 target="_blank"
-                ><font-awesome-icon icon="fa-brands fa-github" size="lg"
-              /></a>
+              >
+                <font-awesome-icon icon="fa-brands fa-github" size="lg" />
+              </a>
             </div>
           </div>
         </ul>
