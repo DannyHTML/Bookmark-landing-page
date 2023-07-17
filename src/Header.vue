@@ -109,10 +109,10 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-library.add(fab);
+library.add(faGithub);
 
 const isHidden = ref(false);
 
