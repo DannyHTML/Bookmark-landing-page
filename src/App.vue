@@ -17,7 +17,7 @@ import Extensions from "./Extensions.vue";
   </div>
   <Features />
   <CustomLinks />
-  <router-view class="h-[580px]" v-slot="{ Component }">
+  <router-view class="mb-28" v-slot="{ Component }">
     <transition name="slide" mode="out-in">
       <component :is="Component" />
     </transition>
@@ -42,6 +42,4 @@ import Extensions from "./Extensions.vue";
   opacity: 1;
   transform: translateX(0px);
 }
-
-@import "./assets/custom-btn-style";
 </style>
