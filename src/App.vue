@@ -3,6 +3,7 @@ import Header from "./Header.vue";
 import FirstSection from "./FirstSection.vue";
 import Features from "./Features.vue";
 import CustomLinks from "./components/CustomLinks.vue";
+import Extensions from "./Extensions.vue";
 </script>
 
 <!-- accordeon -->
@@ -16,11 +17,12 @@ import CustomLinks from "./components/CustomLinks.vue";
   </div>
   <Features />
   <CustomLinks />
-  <router-view class="mb-40" v-slot="{ Component }">
+  <router-view class="mb-20" v-slot="{ Component }">
     <transition name="slide" mode="out-in">
       <component :is="Component" />
     </transition>
   </router-view>
+  <Extensions />
 </template>
 
 <style scoped>
