@@ -56,7 +56,7 @@
     <transition name="fade">
       <div
         v-if="isHidden"
-        class="flex fixed z-10 inset-0 justify-center pt-24 w-screen bg-neutral2Colour bg-opacity-95"
+        class="flex fixed z-10 inset-0 justify-center pt-24 w-screen bg-neutral2Colour bg-opacity-95 overflow-y-auto"
         :class="{ hidden: !isHidden }"
       >
         <ul
@@ -93,9 +93,13 @@
               </a>
               <a
                 href="https://github.com/DannyHTML/Bookmark-landing-page"
-                target="_blank"              
+                target="_blank"
               >
-                <font-awesome-icon class="mb-[-2.5px]"  icon="fa-brands fa-github" size="lg" />
+                <font-awesome-icon
+                  class="mb-[-2.5px]"
+                  icon="fa-brands fa-github"
+                  size="lg"
+                />
               </a>
             </div>
           </div>
