@@ -56,54 +56,56 @@
     <transition name="fade">
       <div
         v-if="isHidden"
-        class="flex fixed z-10 inset-0 justify-center pt-24 w-screen bg-neutral2Colour bg-opacity-95 overflow-y-auto"
+        class="flex fixed z-10 inset-0 justify-center pt-24 w-screen bg-neutral2Colour bg-opacity-95"
         :class="{ hidden: !isHidden }"
       >
-        <ul
-          class="flex uppercase text-lg text-white w-full flex-col items-center gap-4"
-        >
-          <li
-            class="border-t-2 w-4/5 border-white border-opacity-30 text-center pt-4"
+        <div class="overflow-y-auto h-full w-full flex">
+          <ul
+            class="flex uppercase text-lg text-white w-full flex-col items-center gap-4"
           >
-            <a href="#">features</a>
-          </li>
-          <li
-            class="border-t-2 w-4/5 border-white border-opacity-30 text-center pt-4"
-          >
-            <a href="#">pricing</a>
-          </li>
-          <li
-            class="border-b-2 border-t-2 w-4/5 border-white border-opacity-30 text-center pt-4 pb-4"
-          >
-            <a href="#">contact</a>
-          </li>
-          <button
-            class="rounded-lg uppercase flex justify-center items-center text-white py-2 border-2 w-4/5 max-w-sm border-white"
-            type="button"
-          >
-            Login
-          </button>
-          <div class="flex mb-10 h-full">
-            <div class="flex gap-6 items-end">
-              <a href="https://www.facebook.com/" target="_blank">
-                <img class="h-6" src="/images/icon-facebook.svg" alt="" />
-              </a>
-              <a href="https://www.twitter.com/" target="_blank">
-                <img class="h-5" src="/images/icon-twitter.svg" alt="" />
-              </a>
-              <a
-                href="https://github.com/DannyHTML/Bookmark-landing-page"
-                target="_blank"
-              >
-                <font-awesome-icon
-                  class="mb-[-2.5px]"
-                  icon="fa-brands fa-github"
-                  size="lg"
-                />
-              </a>
+            <li
+              class="border-t-2 w-4/5 border-white border-opacity-30 text-center pt-4"
+            >
+              <a href="#">features</a>
+            </li>
+            <li
+              class="border-t-2 w-4/5 border-white border-opacity-30 text-center pt-4"
+            >
+              <a href="#">pricing</a>
+            </li>
+            <li
+              class="border-b-2 border-t-2 w-4/5 border-white border-opacity-30 text-center pt-4 pb-4"
+            >
+              <a href="#">contact</a>
+            </li>
+            <button
+              class="rounded-lg uppercase flex justify-center items-center text-white py-2 border-2 w-4/5 max-w-sm border-white"
+              type="button"
+            >
+              Login
+            </button>
+            <div class="flex mb-10 h-full pb-4">
+              <div class="flex gap-6 items-end">
+                <a href="https://www.facebook.com/" target="_blank">
+                  <img class="h-6" src="/images/icon-facebook.svg" alt="" />
+                </a>
+                <a href="https://www.twitter.com/" target="_blank">
+                  <img class="h-5" src="/images/icon-twitter.svg" alt="" />
+                </a>
+                <a
+                  href="https://github.com/DannyHTML/Bookmark-landing-page"
+                  target="_blank"
+                >
+                  <font-awesome-icon
+                    class="mb-[-2.5px]"
+                    icon="fa-brands fa-github"
+                    size="lg"
+                  />
+                </a>
+              </div>
             </div>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </div>
     </transition>
   </div>
