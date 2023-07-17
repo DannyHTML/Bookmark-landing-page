@@ -32,6 +32,4 @@ import data from "./assets/data.json";
 const extensions = ref(data);
 </script>
 
-<style scoped>
-/* @import "./assets/custom-btn-style"; */
-</style>
+<style scoped></style>
