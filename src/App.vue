@@ -4,6 +4,7 @@ import FirstSection from "./FirstSection.vue";
 import Features from "./Features.vue";
 import CustomLinks from "./components/CustomLinks.vue";
 import Extensions from "./Extensions.vue";
+import custombtnstyle from "./assets/custom-btn-style.css";
 </script>
 
 <!-- accordeon -->
@@ -17,7 +18,7 @@ import Extensions from "./Extensions.vue";
   </div>
   <Features />
   <CustomLinks />
-  <router-view class="mb-20" v-slot="{ Component }">
+  <router-view class="h-[580px]" v-slot="{ Component }">
     <transition name="slide" mode="out-in">
       <component :is="Component" />
     </transition>

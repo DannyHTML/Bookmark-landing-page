@@ -18,10 +18,8 @@
       <div class="mb-6">
         <img :src="item.dots" />
       </div>
-      <div
-        class="border-2 border-transparent rounded-md inline-block py-2 px-3 bg-primaryColour text-white"
-      >
-        <button>{{ item.btnText }}</button>
+      <div>
+        <button class="custom-btn">{{ item.btnText }}</button>
       </div>
     </div>
   </div>

@@ -1,0 +1,11 @@
+.custom-btn {
+  @apply inline-block 
+  py-2 px-3 
+bg-primaryColour 
+  border-2 border-primaryColour
+text-white 
+  rounded-md 
+hover:bg-white hover:border-2 
+  hover:font-medium hover:border-primaryColour 
+  hover:text-primaryColour duration-100;
+}
