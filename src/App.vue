@@ -4,7 +4,6 @@ import FirstSection from "./FirstSection.vue";
 import Features from "./Features.vue";
 import CustomLinks from "./components/CustomLinks.vue";
 import Extensions from "./Extensions.vue";
-import custombtnstyle from "./assets/custom-btn-style.css";
 </script>
 
 <!-- accordeon -->
@@ -43,4 +42,6 @@ import custombtnstyle from "./assets/custom-btn-style.css";
   opacity: 1;
   transform: translateX(0px);
 }
+
+@import "./assets/custom-btn-style";
 </style>

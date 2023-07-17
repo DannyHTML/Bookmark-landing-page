@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import "./style.css";
+import "./assets/custom-btn-style.css";
 import App from "./App.vue";
 import SimpleBookmarking from "./components/SimpleBookmarking.vue";
 import SpeedySearching from "./components/SpeedySearching.vue";
