@@ -93,9 +93,9 @@
               </a>
               <a
                 href="https://github.com/DannyHTML/Bookmark-landing-page"
-                target="_blank"
+                target="_blank"              
               >
-                <font-awesome-icon icon="fa-brands fa-github" size="lg" />
+                <font-awesome-icon class="mb-[-2.5px]"  icon="fa-brands fa-github" size="lg" />
               </a>
             </div>
           </div>

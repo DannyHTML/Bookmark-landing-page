@@ -4,6 +4,9 @@ import FirstSection from "./FirstSection.vue";
 import Features from "./Features.vue";
 </script>
 
+<!-- accordeon -->
+<!-- van links cusstom links maken - component, daarna importeren -->
+
 <template>
   <div class="pb-24 md:pb-28">
     <Header />
