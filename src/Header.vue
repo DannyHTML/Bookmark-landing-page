@@ -31,12 +31,7 @@
         <li class="links"><a href="#">features</a></li>
         <li class="links"><a href="#">pricing</a></li>
         <li class="links"><a href="#">contact</a></li>
-        <button
-          class="rounded-lg uppercase bg-secondaryColour duration-200 flex justify-center items-center text-white w-24 h-10 py-2 hover:bg-white border-2 border-secondaryColour hover:text-secondaryColour"
-          type="button"
-        >
-          Login
-        </button>
+        <button class="custom-btn-header" type="button">Login</button>
       </ul>
     </div>
     <div class="md:hidden">

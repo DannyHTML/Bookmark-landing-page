@@ -5,6 +5,7 @@ import Features from "./Features.vue";
 import CustomLinks from "./components/CustomLinks.vue";
 import Extensions from "./Extensions.vue";
 import Faq from "./Faq.vue";
+import Contact from "./Contact.vue";
 </script>
 
 <!-- accordeon -->
@@ -26,7 +27,10 @@ import Faq from "./Faq.vue";
   <div class="mb-20">
     <Extensions />
   </div>
-  <Faq />
+  <div class="mb-28">
+    <Faq />
+  </div>
+  <Contact />
 </template>
 
 <style scoped>
