@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import "./style.css";
 import "./assets/custom-btn-style.css";
 import App from "./App.vue";
@@ -8,7 +8,7 @@ import SpeedySearching from "./components/SpeedySearching.vue";
 import EasySharing from "./components/EasySharing.vue";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     { path: "/", component: SimpleBookmarking },
     { path: "/SpeedySearching", component: SpeedySearching },
