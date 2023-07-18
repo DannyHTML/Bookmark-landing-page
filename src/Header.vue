@@ -18,7 +18,7 @@
           alt=""
       /></a>
       <!-- logo mobile menu -->
-      <a href="/"
+      <a href="#"
         ><img
           class="relative z-20"
           :class="{ hidden: !isHidden }"
