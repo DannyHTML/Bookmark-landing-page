@@ -13,32 +13,41 @@
             <div class="relative w-full mb-3">
               <div class="flex">
                 <input
+                  v-model.trim="email"
+                  @input="clearError"
                   class="relative z-10 w-full mb-3 md:mb-0 h-10 pl-5 rounded-md outline-none text-black"
                   type="email"
+                  name="email"
                   placeholder="Enter your email adress..."
                 />
                 <!-- hidden by default, show when error message email -->
-                <img
-                  class="absolute z-10 translate-y-1/2 right-4"
-                  :class="{ hidden: !isHidden }"
-                  src="/images/icon-error.svg"
-                  alt=""
-                />
+                <transition name="fade">
+                  <img
+                    class="absolute z-10 translate-y-1/2 right-4"
+                    v-if="isError"
+                    src="/images/icon-error.svg"
+                    alt=""
+                  />
+                </transition>
               </div>
               <!-- hidden by default, show when error message email -->
-              <div
-                class="absolute -top-1 -left-1 -right-1 -bottom-2 md:-bottom-5 border-2 rounded-md border-transparent bg-secondaryColour text-black"
-                :class="{ hidden: !isHidden }"
-              >
-                <div class="absolute z-10 bottom-0 pl-2 text-white text-xs">
-                  <i>Whoops, make sure it's an email </i>
+              <transition name="fade">
+                <div
+                  class="absolute -top-1 -left-1 -right-1 -bottom-2 md:-bottom-5 border-2 rounded-md border-transparent bg-secondaryColour text-black"
+                  v-if="isError"
+                >
+                  <div class="absolute z-10 bottom-0 pl-2 text-white text-xs">
+                    <i>Whoops, make sure it's an email </i>
+                  </div>
                 </div>
-              </div>
+              </transition>
             </div>
             <input
               type="button"
               class="custom-btn-contact"
               value="Contact us"
+              name="submit"
+              @click="validateEmail"
             />
           </form>
         </div>
@@ -50,8 +59,30 @@
 <script setup>
 import { ref } from "vue";
 
-// for email error message
-const isHidden = ref(false);
+const email = ref("");
+const isError = ref(false);
+
+const clearError = () => (isError.value = false);
+
+const validateEmail = () => {
+  const emailPattern = /^[ -~]+@[ -~]+\.[ -~]+$/;
+
+  if (!emailPattern.test(email.value)) {
+    isError.value = true;
+  } else {
+    alert(`Valid email: ${email.value}`);
+  }
+};
 </script>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
