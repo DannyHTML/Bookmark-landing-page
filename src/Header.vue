@@ -11,7 +11,7 @@
     </transition>
     <div>
       <!-- logo default -->
-      <a href="/"
+      <a href="#"
         ><img
           :class="{ hidden: isHidden }"
           src="/images/logo-bookmark.svg"
