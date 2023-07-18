@@ -22,33 +22,4 @@
 
 <script setup></script>
 
-<style scoped>
-.router-link-active,
-.router-link:active,
-.router-link:focus {
-  color: hsl(231, 69%, 60%);
-  transition: all 0.2s ease-in-out;
-}
-
-.router-link {
-  position: relative;
-}
-
-.router-link::before {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  right: 0;
-  width: 0;
-  height: 3px;
-  background-color: hsl(231, 69%, 60%);
-  transition: width 0.3s ease-in-out;
-}
-
-.router-link:hover::before,
-.router-link:focus::before,
-.router-link:active::before {
-  width: 100%;
-  left: 0;
-}
-</style>
+<style scoped></style>

@@ -21,7 +21,7 @@
                   placeholder="Enter your email adress..."
                 />
                 <!-- hidden by default, show when error message email -->
-                <transition name="fade">
+                <transition name="fade-contact">
                   <img
                     class="absolute z-10 translate-y-1/2 right-4"
                     v-if="isError"
@@ -31,7 +31,7 @@
                 </transition>
               </div>
               <!-- hidden by default, show when error message email -->
-              <transition name="fade">
+              <transition name="fade-contact">
                 <div
                   class="absolute -top-1 -left-1 -right-1 -bottom-2 md:-bottom-5 border-2 rounded-md border-transparent bg-secondaryColour text-black"
                   v-if="isError"
@@ -75,14 +75,4 @@ const validateEmail = () => {
 };
 </script>
 
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
+<style scoped></style>

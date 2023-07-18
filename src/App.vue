@@ -35,21 +35,4 @@ import Footer from "./Footer.vue";
   <Footer />
 </template>
 
-<style scoped>
-.slide-enter-active,
-.slide-leave-active {
-  transition: all 0.7s;
-}
-
-.slide-enter-from,
-.slide-leave-to {
-  opacity: 0;
-  transform: translateX(-100px);
-}
-
-.slide-enter-to,
-.slide-leave-from {
-  opacity: 1;
-  transform: translateX(0px);
-}
-</style>
+<style scoped></style>

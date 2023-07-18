@@ -17,3 +17,98 @@ hover:bg-white hover:border-2
 .custom-btn-contact {
   @apply rounded-lg uppercase bg-secondaryColour duration-200 flex justify-center items-center text-white h-10 py-2 px-4 cursor-pointer hover:bg-white border-2 border-secondaryColour hover:text-secondaryColour w-full md:w-1/3;
 }
+
+.custom-red {
+  @apply hover:text-secondaryColour duration-300;
+}
+
+.custom-shadow {
+  @apply hover:shadow-2xl hover:scale-110 duration-200;
+}
+
+/* Router-links */
+
+.router-link-active,
+.router-link:active,
+.router-link:focus {
+  @apply text-blue-500;
+  transition: all 0.2s ease-in-out;
+}
+
+.router-link {
+  @apply relative;
+}
+
+.router-link::before {
+  @apply absolute bottom-0 right-0 w-0 h-[3px] bg-blue-500 duration-300;
+  content: "";
+}
+
+.router-link:hover::before,
+.router-link:focus::before,
+.router-link:active::before {
+  @apply w-full left-0;
+}
+
+/* End router-links */
+
+/* Links header */
+
+.links {
+  @apply relative;
+}
+
+.links::before {
+  @apply absolute -bottom-1 right-0 w-0 h-0.5 bg-secondaryColour duration-300;
+  content: "";
+}
+
+.links:hover::before {
+  @apply w-full left-0;
+}
+
+/* Fade header */
+.fade-enter-active,
+.fade-leave-active {
+  @apply duration-300;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  @apply opacity-0;
+}
+
+/* End fade header */
+
+/* App */
+
+.slide-enter-active,
+.slide-leave-active {
+  @apply duration-500;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  @apply -translate-x-full opacity-0;
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  @apply translate-x-0 opacity-100;
+}
+
+/* End app */
+
+/* Fade contact */
+
+.fade-contact-enter-active,
+.fade-contact-leave-active {
+  @apply duration-200;
+}
+
+.fade-contact-enter-from,
+.fade-contact-leave-to {
+  @apply opacity-0;
+}
+
+/* End fade contact */

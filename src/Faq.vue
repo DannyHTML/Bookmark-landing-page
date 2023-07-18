@@ -21,7 +21,7 @@
             <img
               :src="question.arrow"
               :class="{ 'rotate-180': isQuestionOpen(index) }"
-              class="object-contain transform transition-transform duration-300"
+              class="object-contain duration-300"
             />
           </div>
           <Collapse :when="isQuestionOpen(index)" class="duration-300">
@@ -63,10 +63,8 @@ const eachAnswer = (index) => {
 
 const toggleQuestion = (index) => {
   if (isOpen.value === index) {
-    // Clicked question is already open, so close it
     isOpen.value = null;
   } else {
-    // Clicked question is different, so open it
     isOpen.value = index;
   }
 };

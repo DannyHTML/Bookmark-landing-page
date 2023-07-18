@@ -25,14 +25,14 @@
       <div class="flex h-10 justify-center sm:justify-start gap-4">
         <div>
           <button
-            class="p-2 bg-primaryColour text-white text-sm rounded-md shadow-lg"
+            class="p-2 bg-primaryColour custom-shadow text-white text-sm rounded-md"
           >
             Get it on Chrome
           </button>
         </div>
         <div>
           <button
-            class="p-2 bg-neutral1Colour bg-opacity-20 text-neutral2Colour text-sm rounded-md shadow-lg"
+            class="p-2 bg-neutral1Colour custom-shadow bg-opacity-20 text-neutral2Colour text-sm rounded-md"
           >
             Get it on Firefox
           </button>
