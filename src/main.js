@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import { createRouter, createWebHashHistory } from "vue-router";
+import { Collapse } from "vue-collapsed";
 import "./style.css";
 import "./assets/custom-btn-style.css";
 import App from "./App.vue";
@@ -16,4 +17,4 @@ const router = createRouter({
   ],
 });
 
-createApp(App).use(router).mount("#app");
+createApp(App).use(router).component("Collapse", Collapse).mount("#app");

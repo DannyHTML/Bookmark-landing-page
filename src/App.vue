@@ -4,6 +4,7 @@ import FirstSection from "./FirstSection.vue";
 import Features from "./Features.vue";
 import CustomLinks from "./components/CustomLinks.vue";
 import Extensions from "./Extensions.vue";
+import Faq from "./Faq.vue";
 </script>
 
 <!-- accordeon -->
@@ -22,7 +23,10 @@ import Extensions from "./Extensions.vue";
       <component :is="Component" />
     </transition>
   </router-view>
-  <Extensions />
+  <div class="mb-20">
+    <Extensions />
+  </div>
+  <Faq />
 </template>
 
 <style scoped>
