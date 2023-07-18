@@ -93,7 +93,7 @@
                 >
                   <font-awesome-icon
                     class="mb-[-2.5px]"
-                    icon="fa-brands fa-github"
+                    :icon="['fab', 'github']"
                     size="lg"
                   />
                 </a>
@@ -110,10 +110,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core";
-
-library.add(faGithub);
 
 const isHidden = ref(false);
 

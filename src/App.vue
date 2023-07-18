@@ -6,6 +6,7 @@ import CustomLinks from "./components/CustomLinks.vue";
 import Extensions from "./Extensions.vue";
 import Faq from "./Faq.vue";
 import Contact from "./Contact.vue";
+import Footer from "./Footer.vue";
 </script>
 
 <!-- accordeon -->
@@ -31,6 +32,7 @@ import Contact from "./Contact.vue";
     <Faq />
   </div>
   <Contact />
+  <Footer />
 </template>
 
 <style scoped>
