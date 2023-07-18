@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center">
-    <div class="mb-40 max-w-xl">
+    <div class="mb-10 max-w-xl">
       <div class="mx-8 text-center mb-8">
         <h2 class="capitalize text-2xl font-medium mb-4">
           frequently asked questions
@@ -32,6 +32,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="flex justify-center">
+    <button class="custom-btn">More Info</button>
   </div>
 </template>
 
