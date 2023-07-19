@@ -51,7 +51,7 @@
     <transition name="fade">
       <div
         v-if="isHidden"
-        class="flex fixed z-10 inset-0 justify-center pt-24 w-screen bg-neutral2Colour bg-opacity-95"
+        class="flex fixed z-10 inset-0 justify-center pt-24 w-screen bg-neutral2Colour bg-opacity-95 md:hidden"
         :class="{ hidden: !isHidden }"
       >
         <div class="overflow-y-auto h-full w-full flex">
