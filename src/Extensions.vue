@@ -8,11 +8,34 @@
       got a favourite you’d like us to prioritize.
     </p>
   </div>
+  <!-- <div class="sm:flex flex-wrap sm:justify-center">
+    <div
+      v-for="item in extensions"
+      :key="item.id"
+      class="flex justify-center [&:nth-child(2)]:mt-10 [&:nth-child(3)]:mt-20"
+    >
+      <div
+        class="mx-8 text-center max-h-max mb-8 h-fit pb-6 max-w-xs rounded-lg border-2 border-primaryColour border-opacity-10 shadow-xl"
+      >
+        <div class="mb-6 mt-6 flex justify-center">
+          <img :src="item.logo" :alt="item.alt" />
+        </div>
+        <h3 class="font-medium mb-1">{{ item.title }}</h3>
+        <p class="mb-6">{{ item.description }}</p>
+        <div class="mb-6">
+          <img :src="item.dots" />
+        </div>
+        <div>
+          <button class="custom-btn">{{ item.btnText }}</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
   <div class="sm:flex flex-wrap sm:justify-center">
     <div
       v-for="(item, index) in extensions"
       :key="item.id"
-      :class="eachDivStyle(index)"
+      :class="{ 'mt-10': index === 1, 'mt-20': index === 2 }"
       class="flex justify-center"
     >
       <div
@@ -39,14 +62,6 @@ import { ref } from "vue";
 import data from "./assets/data.json";
 
 const extensions = ref(data);
-
-const eachDivStyle = (index) => {
-  if (index === 1) {
-    return "mt-10";
-  } else if (index === 2) {
-    return "mt-20 relative";
-  }
-};
 </script>
 
 <style scoped></style>
