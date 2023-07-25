@@ -10,6 +10,7 @@
   </div>
   <div class="sm:flex flex-wrap sm:justify-center">
     <div
+      v-motion-pop-visible-once
       v-for="(item, index) in extensions"
       :key="item.id"
       :class="{ 'mt-10': index === 1, 'mt-20': index === 2 }"
