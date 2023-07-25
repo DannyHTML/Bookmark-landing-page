@@ -11,11 +11,7 @@
         </p>
       </div>
       <div class="mx-8">
-        <div
-          v-motion-pop-visible-once
-          v-for="(question, index) in questions"
-          :key="question.id"
-        >
+        <div v-for="(question, index) in questions" :key="question.id">
           <div
             @click="toggleQuestion(index)"
             :class="eachDivStyle(index)"
