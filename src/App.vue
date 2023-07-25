@@ -9,8 +9,6 @@ import Contact from "./Contact.vue";
 import Footer from "./Footer.vue";
 </script>
 
-<!-- accordeon -->
-
 <template>
   <div class="pb-24 md:pb-28">
     <Header />
