@@ -9,8 +9,6 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import SimpleBookmarking from "./components/SimpleBookmarking.vue";
 import SpeedySearching from "./components/SpeedySearching.vue";
 import EasySharing from "./components/EasySharing.vue";
-import { MotionPlugin } from "@vueuse/motion";
-
 library.add(faGithub);
 
 const router = createRouter({
@@ -22,8 +20,4 @@ const router = createRouter({
   ],
 });
 
-createApp(App)
-  .use(router)
-  .component("Collapse", Collapse)
-  .use(MotionPlugin)
-  .mount("#app");
+createApp(App).use(router).component("Collapse", Collapse).mount("#app");
