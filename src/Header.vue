@@ -107,7 +107,7 @@
   <!-- Mobile menu -->
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 

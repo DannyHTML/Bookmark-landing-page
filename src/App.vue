@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Header from "./Header.vue";
 import FirstSection from "./FirstSection.vue";
 import Features from "./Features.vue";

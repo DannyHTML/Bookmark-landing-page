@@ -38,21 +38,28 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import Faq from "./assets/Faq.json";
 
-const questions = ref(Faq);
+interface questions {
+  id: number;
+  question: string;
+  answer: string;
+  arrow: string;
+}
+
+const questions = ref<questions[]>(Faq);
 
 const isOpen = ref(false);
 
-const eachDivStyle = (index) => {
+const eachDivStyle = (index: number) => {
   if (index === 3) {
     return "border-b-2";
   }
 };
 
-const eachAnswer = (index) => {
+const eachAnswer = (index: number) => {
   if (index === 0 || index === 1 || index === 2) {
     return "mb-4";
   }
@@ -61,7 +68,7 @@ const eachAnswer = (index) => {
   }
 };
 
-const toggleQuestion = (index) => {
+const toggleQuestion = (index: number) => {
   if (isOpen.value === index) {
     isOpen.value = null;
   } else {
@@ -69,7 +76,7 @@ const toggleQuestion = (index) => {
   }
 };
 
-const isQuestionOpen = (index) => {
+const isQuestionOpen = (index: number) => {
   return isOpen.value === index;
 };
 </script>

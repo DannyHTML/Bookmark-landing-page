@@ -19,7 +19,7 @@
         class="mx-8 text-center max-h-max mb-8 h-fit pb-6 max-w-xs rounded-lg border-2 border-primaryColour border-opacity-10 shadow-xl"
       >
         <div class="mb-6 mt-6 flex justify-center">
-          <img :src="item.logo" :alt="item.alt" />
+          <img :src="item.logo" :alt="item.altImg" />
         </div>
         <h3 class="font-medium mb-1">{{ item.title }}</h3>
         <p class="mb-6">{{ item.description }}</p>
@@ -34,11 +34,21 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import data from "./assets/data.json";
 
-const extensions = ref(data);
+interface extension {
+  id: number;
+  logo: string;
+  altImg: string;
+  dots: string;
+  title: string;
+  description: string;
+  btnText: string;
+}
+
+const extensions = ref<extension[]>(data);
 </script>
 
 <style scoped></style>
