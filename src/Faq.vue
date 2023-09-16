@@ -51,7 +51,7 @@ interface questions {
 
 const questions = ref<questions[]>(Faq);
 
-const isOpen = ref(false);
+const isOpen = ref<number | null>(null);
 
 const eachDivStyle = (index: number) => {
   if (index === 3) {
