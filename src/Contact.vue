@@ -59,13 +59,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const email = ref("");
-const isError = ref(false);
+const email = ref<string>("");
+const isError = ref<boolean>(false);
 
-const clearError = () => (isError.value = false);
+const clearError = (): boolean => (isError.value = false);
 
-const validateEmail = () => {
-  const emailPattern = /^[ -~]+@[ -~]+\.[ -~]+$/;
+const validateEmail = (): void => {
+  const emailPattern: RegExp = /^[ -~]+@[ -~]+\.[ -~]+$/;
 
   if (!emailPattern.test(email.value)) {
     isError.value = true;
