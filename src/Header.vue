@@ -111,24 +111,24 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-const isHidden = ref(false);
+const isHidden = ref<boolean>(false);
 
 // Scroll effect header
 
-const scrollActive = ref(true);
+const scrollActive = ref<boolean>(true);
 
-const handleScroll = () => {
+const handleScroll = (): void => {
   if (!isHidden.value) {
     scrollActive.value = window.scrollY >= 60;
   }
 };
 
-onMounted(() => {
+onMounted((): void => {
   handleScroll();
   window.addEventListener("scroll", handleScroll);
 });
 
-onBeforeUnmount(() => {
+onBeforeUnmount((): void => {
   window.removeEventListener("scroll", handleScroll);
 });
 </script>
