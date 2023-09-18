@@ -42,14 +42,14 @@
 import { ref } from "vue";
 import Faq from "./assets/Faq.json";
 
-interface questions {
+interface Questions {
   id: number;
   question: string;
   answer: string;
   arrow: string;
 }
 
-const questions = ref<questions[]>(Faq);
+const questions = ref<Questions[]>(Faq);
 
 const isOpen = ref<number | null>(null);
 

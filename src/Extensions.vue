@@ -38,7 +38,7 @@
 import { ref } from "vue";
 import data from "./assets/data.json";
 
-interface extension {
+interface Extension {
   id: number;
   logo: string;
   altImg: string;
@@ -48,7 +48,7 @@ interface extension {
   btnText: string;
 }
 
-const extensions = ref<extension[]>(data);
+const extensions = ref<Extension[]>(data);
 </script>
 
 <style scoped></style>
