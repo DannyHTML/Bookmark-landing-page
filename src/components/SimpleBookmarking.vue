@@ -18,16 +18,16 @@
         sites.
       </p>
       <div class="text-center mt-4 md:text-left">
-        <button
-          class="py-2 px-4 bg-primaryColour text-white rounded-md border-2 border-primaryColour hover:bg-white hover:border-2 hover:font-medium hover:border-primaryColour hover:text-primaryColour hover:text-lg duration-300"
-        >
+        <ButtonCustom :style="'py-2 px-4 bg-primaryColour border-2 border-primaryColour text-white rounded-md hover:bg-white hover:border-2 hover:font-medium hover:border-primaryColour hover:text-primaryColour hover:text-lg duration-300'">
           More info
-        </button>
+        </ButtonCustom>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ButtonCustom from './ButtonRouter.vue';
+</script>
 
 <style scoped></style>
