@@ -34,11 +34,12 @@
     </div>
   </div>
   <div class="flex justify-center">
-    <button class="custom-btn">More Info</button>
+    <CustomButton :style="'py-2 px-4 bg-primaryColour text-white rounded-md border-2 border-primaryColour hover:bg-white hover:border-2 hover:font-medium hover:border-primaryColour hover:text-primaryColour hover:text-lg duration-300'">More Info</CustomButton>
   </div>
 </template>
 
 <script setup lang="ts">
+import CustomButton from "./components/CustomButton.vue";
 import { ref } from "vue";
 import Faq from "./assets/Faq.json";
 

@@ -44,7 +44,7 @@
             </div>
             <input
               type="button"
-              class="custom-btn-contact"
+              class="rounded-lg uppercase bg-secondaryColour duration-200 flex justify-center items-center text-white h-10 py-2 px-4 cursor-pointer hover:bg-white border-2 border-secondaryColour hover:text-secondaryColour w-full md:w-1/3"
               value="Contact us"
               name="submit"
               @click="validateEmail"

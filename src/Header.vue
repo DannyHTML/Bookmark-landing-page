@@ -31,7 +31,8 @@
         <li class="links"><a href="#">features</a></li>
         <li class="links"><a href="#">pricing</a></li>
         <li class="links"><a href="#">contact</a></li>
-        <button class="custom-btn-header" type="button">Login</button>
+        <CustomButton :style="'rounded-lg uppercase bg-secondaryColour duration-200 flex justify-center items-center text-white w-24 h-10 py-2 cursor-pointer hover:bg-white border-2 border-secondaryColour hover:text-secondaryColour'">login</CustomButton>
+       
       </ul>
     </div>
     <div class="md:hidden">
@@ -73,12 +74,11 @@
             >
               <a href="#">contact</a>
             </li>
-            <button
-              class="rounded-lg uppercase flex justify-center items-center text-white py-2 border-2 w-4/5 max-w-sm border-white"
-              type="button"
+            <CustomButton :style="'rounded-lg uppercase flex justify-center items-center text-white py-2 border-2 w-4/5 max-w-sm border-white'"
+
             >
               Login
-            </button>
+            </CustomButton>
             <div class="flex mb-10 h-full pb-4">
               <div class="flex gap-6 items-end">
                 <a href="https://www.facebook.com/" target="_blank">
@@ -108,8 +108,10 @@
 </template>
 
 <script setup lang="ts">
+import CustomButton from "./components/CustomButton.vue";
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 
 const isHidden = ref<boolean>(false);
 
