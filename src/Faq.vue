@@ -14,7 +14,7 @@
         <div v-for="(question, index) in questions" :key="question.id">
           <div
             @click="toggleQuestion(index)"
-            :class="eachDivStyle(index)"
+            :class="{ 'border-b-2': index === 3}"
             class="cursor-pointer border-t-2 pt-4 pb-4 pr-4 flex justify-between text-lg"
           >
             {{ question.question }}
@@ -52,12 +52,6 @@ interface Questions {
 const questions = ref<Questions[]>(Faq);
 
 const isOpen = ref<number | null>(null);
-
-const eachDivStyle = (index: number) => {
-  if (index === 3) {
-    return "border-b-2";
-  }
-};
 
 const toggleQuestion = (index: number) => {
   if (isOpen.value === index) {
