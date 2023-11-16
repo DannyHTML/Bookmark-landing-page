@@ -25,7 +25,7 @@
             />
           </div>
           <Collapse :when="isQuestionOpen(index)" class="duration-300">
-            <p :class="eachAnswer(index)">
+            <p :class="{ 'mb-4': index === 0 || index === 1 || index === 2, 'mt-4': index === 3}" >
               {{ question.answer }}
             </p>
           </Collapse>
@@ -56,15 +56,6 @@ const isOpen = ref<number | null>(null);
 const eachDivStyle = (index: number) => {
   if (index === 3) {
     return "border-b-2";
-  }
-};
-
-const eachAnswer = (index: number) => {
-  if (index === 0 || index === 1 || index === 2) {
-    return "mb-4";
-  }
-  if (index === 3) {
-    return "mt-4";
   }
 };
 
