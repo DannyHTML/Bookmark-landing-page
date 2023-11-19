@@ -6,17 +6,17 @@ import "./assets/custom-style.css";
 import App from "./App.vue";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import SimpleBookmarking from "./components/SimpleBookmarking.vue";
-import SpeedySearching from "./components/SpeedySearching.vue";
-import EasySharing from "./components/EasySharing.vue";
 library.add(faGithub);
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
-    { path: "/", component: SimpleBookmarking },
-    { path: "/SpeedySearching", component: SpeedySearching },
-    { path: "/EasySharing", component: EasySharing },
+    { path: "/", 
+    component: () => import("./components/SimpleBookmarking.vue") },
+    { path: "/SpeedySearching", 
+    component: () => import("./components/SpeedySearching.vue") },
+    { path: "/EasySharing", 
+    component: () => import("./components/EasySharing.vue") },
   ],
 });
 

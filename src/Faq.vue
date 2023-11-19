@@ -13,18 +13,18 @@
       <div class="mx-8">
         <div v-for="(question, index) in questions" :key="question.id">
           <div
-            @click="toggleQuestion(index)"
+            @click="handleMultiple(index)"
             :class="{ 'border-b-2': index === 3}"
             class="cursor-pointer border-t-2 pt-4 pb-4 pr-4 flex justify-between text-lg"
           >
             {{ question.question }}
             <img
               :src="question.arrow"
-              :class="{ 'rotate-180': isQuestionOpen(index) }"
+              :class="{ 'rotate-180': question.isExpanded}"
               class="object-contain duration-300"
             />
           </div>
-          <Collapse :when="isQuestionOpen(index)" class="duration-300">
+          <Collapse :when="question.isExpanded" class="duration-300">
             <p :class="{ 'mb-4': index === 0 || index === 1 || index === 2, 'mt-4': index === 3}" >
               {{ question.answer }}
             </p>
@@ -46,25 +46,19 @@ import Faq from "./assets/Faq.json";
 interface Questions {
   id: number;
   question: string;
-  answer: string;
+  answer: string; 
   arrow: string;
+  isExpanded: boolean;
 }
 
 const questions = ref<Questions[]>(Faq);
 
-const isOpen = ref<number | null>(null);
+const handleMultiple = (index: number) => {
+  questions.value.forEach((question, i) => {
+    question.isExpanded = i === index ? !question.isExpanded : false;
+  })
+}
 
-const toggleQuestion = (index: number) => {
-  if (isOpen.value === index) {
-    isOpen.value = null;
-  } else {
-    isOpen.value = index;
-  }
-};
-
-const isQuestionOpen = (index: number) => {
-  return isOpen.value === index;
-};
 </script>
 
 <style scoped></style>
