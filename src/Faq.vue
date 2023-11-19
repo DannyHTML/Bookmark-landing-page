@@ -53,11 +53,12 @@ interface Questions {
 
 const questions = ref<Questions[]>(Faq);
 
-const handleMultiple = (index: number) => {
-  questions.value.forEach((question, i) => {
+const handleMultiple = (index: number): void => {
+  questions.value.forEach((question, i: number) => {
     question.isExpanded = i === index ? !question.isExpanded : false;
   })
 }
+
 
 </script>
 
