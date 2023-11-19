@@ -4,9 +4,9 @@ import { Collapse } from "vue-collapsed";
 import "./style.css";
 import "./assets/custom-style.css";
 import App from "./App.vue";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faFacebookSquare, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
-library.add(faGithub);
+library.add(faGithub, faFacebookSquare, faTwitter);
 
 const router = createRouter({
   history: createWebHashHistory(),

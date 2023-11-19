@@ -1,7 +1,3 @@
-.custom-red {
-  @apply hover:text-secondaryColour duration-300;
-}
-
 .custom-shadow {
   @apply hover:shadow-2xl hover:scale-110 duration-200;
 }
