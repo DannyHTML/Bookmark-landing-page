@@ -18,7 +18,7 @@ import Footer from "./Footer.vue";
   </div>
   <Features />
   <CustomLinks />
-  <router-view class="mb-28" v-slot="{ Component }">
+  <router-view class="mb-28 2xl:container 2xl:mx-auto" v-slot="{ Component }">
     <transition name="slide" mode="out-in">
       <component :is="Component" />
     </transition>

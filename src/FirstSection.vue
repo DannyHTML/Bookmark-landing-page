@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col items-center md:justify-between w-full sm:flex sm:flex-row"
+    class="flex flex-col 2xl:container 2xl:mx-auto items-center md:justify-between w-full sm:flex sm:flex-row"
   >
     <div
       class="relative sm:order-1 justify-center max-w-2xl md:w-full z-0 px-8 mb-20"

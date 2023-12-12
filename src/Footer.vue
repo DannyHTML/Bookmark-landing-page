@@ -3,7 +3,7 @@
     class="bg-neutral2Colour md:flex md:justify-center md:items-center text-white text-sm"
   >
     <div
-      class="flex justify-center md:w-full md:items-center pt-8 pb-8 md:mx-10"
+      class="flex container justify-center md:w-full md:items-center pt-8 pb-8 md:mx-10"
     >
       <div class="mx-8 text-center md:flex md:justify-between md:w-full">
         <div class="mb-8 md:flex md:-mb-0">
