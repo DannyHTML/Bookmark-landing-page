@@ -8,7 +8,9 @@
         class="absolute -z-10 w-full h-full left-0 top-0 bg-white shadow-2xl"
         :class="{ hidden: !scrollActive }"
       ></div>
+      <!-- container mx-auto -->
     </transition>
+    <div class="container flex justify-between mx-auto">
     <div>
       <!-- logo default -->
       <a href="#"
@@ -46,6 +48,8 @@
     <div :class="{ hidden: !isHidden }" class="relative z-20">
       <img src="/images/icon-close.svg" alt="" @click="isHidden = !isHidden" />
     </div>
+</div>
+
 
     <!-- Mobile menu -->
 
